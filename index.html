@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkedin Clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+<style>
+    a{
+        text-decoration: none;
+    }
+
+    .search-input::placeholder {
+        background-image: url('/assets/search.svg');
+        background-repeat: no-repeat;
+        
+    }
+
+    .search-input {
+        text-indent: 32px;
+    }
+    .write-input::placeholder {
+        background-image: url('/assets/write.svg');
+        background-repeat: no-repeat;
+        
+    }
+
+    .write-input {
+        text-indent: 32px;
+    }
+
+    .navbar {
+    --bs-navbar-padding-y: 0;
+    }   
+</style>
+</head>
+
+<body style="background-color: rgb(239, 244, 250);">
+    <!-- header begin -->
+    <div style=" width:100%;" class=" navbar navbar-expand-xl bg-white d-flex align-items-center justify-content-center fixed-top">      
+            <nav style="height:80px; width: 100%;" class="navbar navbar-expand-lg bg-white ">
+                <div style="width: 40%; " class="container-fluid ">
+                  <a class="navbar-brand" href="/index.html"><img style="width:50px; height:50px; margin-left: 240px; object-fit: cover; border-radius: 5px;" src="images/linkedin.jpg" alt=""></a>
+                  <form   class="d-flex m-auto me-4" role="search">
+                    <input style="width:360px; height: 40px;" class="form-control border-secondary search-input" type="search" placeholder="Search" aria-label="Search">
+                  </form>
+                </div>
+                <div style="width: 40%; height:100%; border-right: 1px solid rgb(216, 216, 216) ;" class="collapse navbar-collapse d-flex">
+                    <ul  class="navbar-nav d-flex justify-content-center align-items-center" style="margin-left: 120px;" >
+                      <li class="nav-item active ms-4 d-flex justify-content-center align-items-center text-center flex-column"><a class="nav-link" href="#"><i class="fa-solid fa-house fs-4 text text-black"></i><div class="fw-bold text-black">Anasayfa</div></a></li>
+                      <li class="nav-item ms-4 d-flex justify-content-center align-items-center text-center flex-column"><a class="nav-link" href="#"><i class="fa-solid fa-users fs-4 text text-secondary"></i><div class="fw-bold text-secondary">Ağım</div></a></li>
+                      <li class="nav-item ms-4 d-flex justify-content-center align-items-center text-center flex-column"><a class="nav-link" href="#"><i class="fa-solid fa-briefcase fs-4 text text-secondary"></i></i><div class="fw-bold text-secondary">İş İlanları</div></a></li>
+                      <li class="nav-item ms-4 d-flex justify-content-center align-items-center text-center flex-column"><a class="nav-link" href="#"><i class="fa-solid fa-comment-dots fs-4 text text-secondary"></i><div class="fw-bold text-secondary">Mesajlaşma</div></a></li>
+                      <li class="nav-item ms-4 d-flex justify-content-center align-items-center text-center flex-column"><a class="nav-link" href="#"><i class="fa-solid fa-bell fs-4 text text-secondary"></i><div class="fw-bold text-secondary">Bildirimler</div></a></li>
+                      <li class="nav-item ms-4 d-flex justify-content-center align-items-center text-center flex-column"><a class="nav-link" href=""><img src="/images/profile.jpg" class="object-fit-cover" style="width: 30px; height: 30px; border-radius: 50%;"/><div class="fw-bold text-secondary">Ben</div></a></li>
+                    </ul>
+                 </div>
+                 <div style="width: 20%; height: 100%;" class="m-0 d-flex align-items-center text-center">
+                    <ul  class="navbar-nav" >
+                        <li class="nav-item active ms-4 d-flex justify-content-center align-items-center text-center flex-column"><a class="nav-link" href="#"><i class="fa-solid fa-table-cells fs-4 text text-secondary"></i><div class="fw-bold text-secondary">İş</div></a></li>
+                        <li class="nav-item ms-4 d-flex justify-content-center align-items-center text-center flex-column"><a class="nav-link" href="#"><i class="fa-solid fa-laptop fs-4 text text-secondary"></i><div class="fw-bold text-secondary">İş İlanı Yayınla</div></a></li>
+                      </ul>
+                 </div>
+            </nav>     
+    </div>  
+    <!-- header End -->
+
+ 
+    <div style="width: 100%; margin-top: 80px;" class=" d-flex align-items-center justify-content-center">
+        <!-- big row begin -->
+        <div style="width: 1400px;" class="row mt-4">
+            <!-- big col-1 begin -->
+            <div class="col ">
+                <!-- col begin -->
+                <div class="col overflow-visible">
+                    <!-- first row beggin -->
+                    <div style="width: 320px; height: 430px; border: 1px solid rgb(230, 230, 230); " class="row bg-white p-0 rounded-2">
+                        <div style="position: relative;" class="d-flex align-items-center flex-column">                     
+                            <img style=" width: 320px; height:100px; position:absolute; z-index: 10; border-top-right-radius: 5px; border-top-left-radius: 5px;" src="https://images.unsplash.com/photo-1529528744093-6f8abeee511d?q=40&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                            <img style="width: 100px; height: 100px; object-fit: cover; position:absolute; z-index: 20; margin-top: 50px; border:2px solid rgb(255, 255, 255) ;" class="rounded-pill" src="/images/profile.jpg" alt="">
+                            <a class="text-dark" href=""><h5  style="margin-top: 170px;">İlayda Kaçkın</h5></a>  
+                            <div class="d-flex text-secondary text-center align-items-center"> <p> Jr.Frontend Developer</p></div>
+                            <div  style="width: 320px; height: 2px; background-color: rgb(230, 230, 230);"></div>
+                            <div class="d-flex mt-4"><p class="fw-bold text-secondary">Profilinizi Kimler Görüntüledi</p> <a class="fw-bold ms-2" href="">500</a></div>
+                            <div class="d-flex mb-3"><p class="fw-bold text-secondary">Yayınınız için görüntüleme</p> <a class="fw-bold ms-2" href="">200</a></div>
+                            <div class="d-flex" style="width:100%; height: 2px;background-color:rgb(230, 230, 230); "></div>
+                            <div class="d-flex align-items-start  mt-3" style="margin-right:180px;"><a  href=""><i class="fa-solid fa-bookmark text-secondary fs-5"></i></a> <p class="fw-bold fs-6 ms-2">Ögelerim</p></div>
+                        </div>
+                    </div>
+                    <!-- first row end-->
+
+                    <!-- second row beggin-->
+                    <div style="width: 320px; height: 180px; border: 1px solid rgb(230, 230, 230); " class="row d-flex justify-content-center align-items-center flex-column bg-white p-0 rounded-2 mt-2">
+                        <h4 class="ms-3 pb-2">Sayfalarım</h4>
+                        <div class="d-flex ms-3">
+                           <img style="width: 50px; height: 50px; object-fit: cover;" src="https://images.unsplash.com/photo-1526800544336-d04f0cbfd700?q=40&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                           <div class="ms-3"><h5>Doğa Dostları</h5> <h6 class="text-secondary">Sayfa Bildirimleri</h6></div>
+                           <div class="ms-5 fw-bold" style="margin-top: 30px;"><a href="">10</a></div>
+                        </div>
+                    </div>
+                    <!-- second row end-->
+
+                    <!--third row beggin  -->
+                    <div style="width: 320px; border: 1px solid rgb(230, 230, 230);margin-top: 1rem;top: 100px;position: sticky;" class="row d-flex justify-content-center align-items-center flex-column bg-white p-0 rounded-2 sticky-top overflow-visible ">
+                        <div class="news ms-3 mt-4">
+                            <a class="fs-5 text-dark" href="">En Yeni</a>
+                            <div class="mt-3">
+                                <a class="d-flex text-secondary" href=""><p>#</p><p>Kodluyoruz</p></a>
+                            </div>
+                            <div>
+                                <a class="d-flex text-secondary" href=""><p>#</p><p>Frontend</p></a>
+                            </div>
+                            <div>
+                                <a class="d-flex text-secondary" href=""><p>#</p><p>html</p></a>
+                            </div>
+                            <div>
+                                <a class="d-flex text-secondary" href=""><p>#</p><p>Css</p></a>
+                            </div>
+                            <div>
+                                <a class="d-flex text-secondary" href=""><p>#</p><p>Bootstrap</p></a>
+                            </div>
+                        </div>
+
+                        <div class="ms-3 mt-4 d-flex">
+                            <div class="d-flex flex-column">
+                                <a class="fs-6 fw-bold" href="">Gruplar</a>
+                                <div class="d-flex mt-3">
+                                    <a class="fs-6 fw-bold" href="">Etkinlikler</a>
+                                    <a style="margin-left: 180px;" class="" href=""><i class="fa-solid fa-plus  text-secondary "></i></a>
+                                </div>   
+                            </div>                                                
+                        </div>
+
+                        <div class="ms-3 mt-4">
+                            <a class="fs-6 fw-bold" href="">Takip Edilen Hashtagler</a>
+                            <div class="mt-3">
+                                <a class="d-flex text-secondary" href=""><p>#</p><p>Kodluyoruz</p></a>
+                            </div>
+                            <div>
+                                <a class="d-flex text-secondary" href=""><p>#</p><p>Frontend</p></a>
+                            </div>
+                        </div>
+                        
+                        <div class="me-3" style="width: 100%; height: 2px; background-color: rgb(230, 230, 230);"></div>
+                        
+                        <a class="text-dark fw-bold p-4">Daha Fazlasını Keşfet</a>
+                    </div>
+                    <!--third row end  -->
+                    <div style="height: 100vh;"> </div>
+            
+                </div>
+                <!-- col end -->
+            </div> 
+            <!-- big col-1 end --> 
+
+            <!-- big col-2 begin--> 
+            <div class="col">
+                <div class="col">
+                    <div class="row d-flex align-items-center justify-content-center ms-1 " style="width:650px;">
+                        <div class="row d-flex justify-content-center align-items-center flex-column bg-white p-0 rounded-1 ">
+                            <form   class="d-flex align-items-center justify-content-center mt-4" role="search">
+                                <input style="width:590px; height: 50px; border: 1px solid rgb(207, 207, 207);" class="form-control  write-input rounded-pill me-3" type="search" placeholder="Bir Gönderi Başlat" aria-label="Search">
+                            </form>
+                            <div class="d-flex align-items-center justify-content-center text-center ms-4 mb-3 mt-4">
+                                <a class="d-flex align-items-center justify-content-center text-center me-5" style=" background-color: rgb(241, 241, 241); width: 120px; height: 40px; color: #70B5F9;" href=""> <i class="fa-solid fa-image fs-5 "></i> <p class="ps-2 pt-3">Fotoğraf</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-5" style=" background-color: rgb(241, 241, 241); width: 120px; height: 40px; color:  #7FC15E;" href=""><i class="fa-brands fa-youtube  fs-5"></i><p class="ps-2 pt-3">Video</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-5" style=" background-color:rgb(241, 241, 241); width: 120px; height: 40px; color:  #E7A33E;" href=""><i class="fa-regular fa-calendar  fs-5"></i> <p class="ps-2 pt-3" >Etkinlikler</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-5" style=" background-color: rgb(241, 241, 241); width: 120px; height: 40px;" href="">
+                                    <span class="d-flex align-items-center justify-content-center text-center">
+                                        <svg style="width: 24px; height: 24px; color: #F5987E; " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fs-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                                        </svg>
+                                        <p class="ps-2 pt-3">Yazı Yaz</p>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- posts begin -->
+                    
+                    <div class="row ">
+                       <!--post card begin -->
+                       <div class="Card d-flex flex-column mt-3" style="width: 670px;" href="">
+                        <div class="rounded-1 bg-white" style="width: 100%;"> 
+                            <div style="display: flex; justify-content:space-between;" class=" p-2 picture">
+                                <div style="display: flex;">
+                                    <img style="width: 70px; height: 70px; object-fit:cover;" class="rounded-pill p-1" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=40&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                    <div class="d-flex flex-column ms-3" style="height:70px;">
+                                        <a class="text-black fw-bold " href="">kullanıcıAdı</a>
+                                        <p class="mb-0 text-secondary">Front-end Developer</p>
+                                        <div class="d-flex mb-0 text-secondary" style="display: flex;"><p>25s</p> <i class="fa-solid fa-earth-americas mt-1 ms-1"></i></div> 
+                                    </div>          
+                                </div>
+                                <div class="mb-0"><a  href=""><i class="fa-sharp fa-solid fa-ellipsis fs-4 text text-secondary pt-2 pe-2 ms-3"></i></a></div>                                 
+                            </div>
+                            <p class="ms-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum commodi repellat voluptatibus reicie incidunt cumque?</p>
+                            <div class="mb-2"><a href=""><img style="width: 100%; object-fit: cover;" src="https://images.unsplash.com/photo-1669023414162-5bb06bbff0ec?q=40&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a></div>
+                            <span class="ms-3" ><img style="width: 20px; height: 20px;" src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt=""></span>
+                            <span class=""><img style="width: 20px; height: 20px;" src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f" alt=""></span>
+                            <span class="text-secondary fw-semibold"><img style="width: 20px; height: 20px;" src="https://static-exp1.licdn.com/sc/h/7fx9nkd7mx8avdpqm5hqcbi97" alt="">  210</span>
+                            <div class="d-flex mt-2" style="width:100%; height: 2px;background-color:rgb(241, 245, 252); "></div>
+                            <div class="d-flex align-items-center justify-content-center text-center ms-3 mt-2  ">
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color: rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-regular fa-thumbs-up fs-5 text"></i><p class="ps-2 pt-3">Beğen</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color: rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-regular fa-comment fs-5 text"></i><p class="ps-2 pt-3">Yorum Yap</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color:rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-solid fa-share fs-5 text"></i> <p class="ps-2 pt-3" >Paylaş</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color:rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-solid fa-paper-plane fs-5 text"></i> <p class="ps-2 pt-3" >Gönder</p></a>
+                            </div>     
+                        </div>
+                    </div>
+                       <!--post card end -->
+                       <!--post card begin -->
+                       <div class="Card d-flex flex-column mt-3" style="width: 670px;" href="">
+                        <div class=" rounded-1 bg-white" style="width: 100%;"> 
+                            <div style="display: flex; justify-content:space-between;" class=" p-2 picture">
+                                <div style="display: flex;">
+                                    <img style="width: 70px; height: 70px; object-fit:cover;" class="rounded-pill p-1" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=40&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                    <div class="d-flex flex-column ms-3" style="height:70px;">
+                                        <a class="text-black fw-bold " href="">kullanıcıAdı</a>
+                                        <p class="mb-0 text-secondary">Front-end Developer</p>
+                                        <div class="d-flex mb-0 text-secondary" style="display: flex;"><p>25s</p> <i class="fa-solid fa-earth-americas mt-1 ms-1"></i></div> 
+                                    </div>          
+                                </div>
+                                <div class="mb-0"><a  href=""><i class="fa-sharp fa-solid fa-ellipsis fs-4 text text-secondary pt-2 pe-2 ms-3"></i></a></div>                                 
+                            </div>
+                            <p class="ms-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum commodi repellat voluptatibus reicie incidunt cumque?</p>
+                            <div class="mb-2"><a href=""><img style="width: 100%; object-fit: cover;" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=40&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a></div>
+                            <span class="ms-3" ><img style="width: 20px; height: 20px;" src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt=""></span>
+                            <span class=""><img style="width: 20px; height: 20px;" src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f" alt=""></span>
+                            <span class="text-secondary fw-semibold"><img style="width: 20px; height: 20px;" src="https://static-exp1.licdn.com/sc/h/7fx9nkd7mx8avdpqm5hqcbi97" alt="">  210</span>
+                            <div class="d-flex mt-2" style="width:100%; height: 2px;background-color:rgb(241, 245, 252); "></div>
+                            <div class="d-flex align-items-center justify-content-center text-center ms-3 mt-2  ">
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color: rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-regular fa-thumbs-up fs-5 text"></i><p class="ps-2 pt-3">Beğen</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color: rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-regular fa-comment fs-5 text"></i><p class="ps-2 pt-3">Yorum Yap</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color:rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-solid fa-share fs-5 text"></i> <p class="ps-2 pt-3" >Paylaş</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color:rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-solid fa-paper-plane fs-5 text"></i> <p class="ps-2 pt-3" >Gönder</p></a>
+                            </div>     
+                        </div>
+                    </div>
+                       <!--post card end -->
+                       <!--post card begin -->
+                       <div class="Card d-flex flex-column mt-3" style="width: 670px;" href="">
+                        <div class=" rounded-1 bg-white" style="width: 100%;"> 
+                            <div style="display: flex; justify-content:space-between;" class=" p-2 picture">
+                                <div style="display: flex;">
+                                    <img style="width: 70px; height: 70px; object-fit:cover;" class="rounded-pill p-1" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=40&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                    <div class="d-flex flex-column ms-3" style="height:70px;">
+                                        <a class="text-black fw-bold " href="">kullanıcıAdı</a>
+                                        <p class="mb-0 text-secondary">Front-end Developer</p>
+                                        <div class="d-flex mb-0 text-secondary" style="display: flex;"><p>25s</p> <i class="fa-solid fa-earth-americas mt-1 ms-1"></i></div> 
+                                    </div>          
+                                </div>
+                                <div class="mb-0"><a  href=""><i class="fa-sharp fa-solid fa-ellipsis fs-4 text text-secondary pt-2 pe-2 ms-3"></i></a></div>                                 
+                            </div>
+                            <p class="ms-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum commodi repellat voluptatibus reicie incidunt cumque?</p>
+                            <div class="mb-2"><a href=""><img style="width: 100%; object-fit: cover;" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=40&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a></div>
+                            <span class="ms-3" ><img style="width: 20px; height: 20px;" src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt=""></span>
+                            <span class=""><img style="width: 20px; height: 20px;" src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f" alt=""></span>
+                            <span class="text-secondary fw-semibold"><img style="width: 20px; height: 20px;" src="https://static-exp1.licdn.com/sc/h/7fx9nkd7mx8avdpqm5hqcbi97" alt="">  210</span>
+                            <div class="d-flex mt-2" style="width:100%; height: 2px;background-color:rgb(241, 245, 252); "></div>
+                            <div class="d-flex align-items-center justify-content-center text-center ms-3 mt-2  ">
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color: rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-regular fa-thumbs-up fs-5 text"></i><p class="ps-2 pt-3">Beğen</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color: rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-regular fa-comment fs-5 text"></i><p class="ps-2 pt-3">Yorum Yap</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color:rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-solid fa-share fs-5 text"></i> <p class="ps-2 pt-3" >Paylaş</p></a>
+                                <a class="d-flex align-items-center justify-content-center text-center me-3 mb-2" style=" background-color:rgb(247, 247, 247); width: 160px; height: 40px; color: #7a7a7a;" href=""><i class="fa-solid fa-paper-plane fs-5 text"></i> <p class="ps-2 pt-3" >Gönder</p></a>
+                            </div>     
+                        </div>
+                    </div>
+                       <!--post card end -->
+                    </div>
+                    <!-- posts end -->
+                </div> 
+            </div>  
+            <!-- big col-2 end--> 
+
+            <!-- big col-3 begin--> 
+            <div class="col">
+                <div class="col">
+                    <!-- row 1 begin -->
+                    <div  class="row">
+                        <div class="bg-white p-0 rounded-2" style="width:400px; border: 1px solid rgb(230, 230, 230);">
+                            <div>
+                                <div class="d-flex mt-4 ms-2" style=" height: 50px;display: flex; justify-content: space-between;"><h4 class="ms-2 fs-5">Akışınıza Ekleyin</h4> <a href=""><i class="fa-solid fa-circle-info me-2 fs-5 text-secondary"></i></a></div>  
+                                <div class=" ms-2 mb-2" style="display: flex; justify-content: space-between;">
+                                    <div class="d-flex align-items-center justify-content-center ms-2" style="display: flex;">
+                                        <img class="rounded-pill border border-warning" style="width: 50px; height: 50px; object-fit: cover;" src="/images/patikadev.jpeg" alt="">
+                                        <h5 class="ms-2">Patika.dev</h5>
+                                    </div>
+                                    <a class="border border-info text-info fw-bold d-flex align-items-center justify-content-center text-center rounded-pill ms-2 mt-2 me-3" style="width: 100px; height: 30px ;" href=""><p style="margin-top: 12px;">+Takip Et</p></a>
+                                </div>
+
+                                <div class="ms-2 mb-2" style="display: flex; justify-content: space-between;">
+                                    <div class="d-flex align-items-center justify-content-center ms-2" style="display: flex;">
+                                        <img class="rounded-pill" style="width: 50px; height: 50px; object-fit: cover;" src="/images/kodluyoruz.png" alt="">
+                                        <h5 class="ms-2">Kodluyoruz</h5>
+                                    </div>
+                                    <a class="border border-info text-info fw-bold d-flex align-items-center justify-content-center text-center rounded-pill ms-2 mt-2 me-3" style="width: 100px; height: 30px ;" href=""><p style="margin-top: 12px;">+Takip Et</p></a>
+                                </div>
+                                <div class=" ms-2 mb-4 " style="display: flex; justify-content: space-between;">
+                                    <div class="d-flex align-items-center justify-content-center ms-2" style="display: flex;">
+                                        <img class="rounded-pill" style="width: 50px; height: 50px; object-fit: cover;" src="/images/coderspace.png" alt="">
+                                        <h5 class="ms-2">Coderspace</h5>
+                                    </div>
+                                    <a class="border border-info text-info fw-bold d-flex align-items-center justify-content-center text-center rounded-pill ms-2 mt-2 me-3" style="width: 100px; height: 30px ;" href=""><p style="margin-top: 12px;">+Takip Et</p></a>
+                                </div>       
+                            </div> 
+                        </div>                      
+                    </div>
+                    <!-- row 1 end -->
+                    <!-- row 2 begin -->
+                    <div class="row">
+                        <div class="bg-white p-0 rounded-2 mt-3" style="width:400px; border: 1px solid rgb(230, 230, 230);">
+                            <div>
+                                <div class="d-flex mt-4 ms-2" style=" height: 50px;display: flex; justify-content: space-between;"><h4 class="ms-2 fs-5">Bugünün En Çok İzlenen Eğitimleri</h4> <a href=""><i class="fa-solid fa-circle-info me-2 fs-5 text-secondary"></i></a></div>  
+                                <div class="d-flex ms-3" style="display:flex ;">
+                                    <div><p class="fw-bold">1.</p></div>
+                                    <div class="d-flex flex-column">
+                                        <p class="mb-0 fw-bold">Lorem ipsum dolor sit amet consectetur, fuga.</p>
+                                        <p class="text-secondary">Lorem ipsum dolor sit amet consectetur.</p>
+                                    </div>                     
+                                </div>
+                                <div class="d-flex ms-3" style="display:flex ;">
+                                    <div><p class="fw-bold">1.</p></div>
+                                    <div class="d-flex flex-column">
+                                        <p class="mb-0 fw-bold">Lorem ipsum dolor.</p>
+                                        <p class="text-secondary">Lorem ipsum dolor sit.</p>
+                                    </div>                     
+                                </div>
+                                <div class="d-flex ms-3">
+                                    <div><p class="fw-bold">1.</p></div>
+                                    <div class="d-flex flex-column">
+                                        <p class="mb-0 fw-bold">Lorem ipsum dolor sit amet consectetur, fuga...</p>
+                                        <p class="text-secondary">Lorem ipsum dolor sit amet consectetur.</p>
+                                    </div>                     
+                                </div> 
+                                <div class="d-flex align-items-center justify-content-center text-center ms-5 mb-3" style="width: 300px;">
+                                    <a class="fw-bold text-info" href="">Linkedin Learning'de daha fazlasını göster...</a>
+                                </div>                         
+                            </div> 
+                        </div>                      
+                    </div>
+                    <!-- row 2 end -->
+                    <div class="row d-flex flex-wrap justify-content-center align-items-center text-center mt-3" style="font-size: 13px;">
+                        <a class="col-4 mb-2 mt-2 text-secondary" href="#">Hakkında</a> 
+                        <a class="col-4 mb-2 text-secondary" href="">Erişilebilirlik </a>
+                        <a class="col-4 mb-2 text-secondary" href="">Yardım Merkezi</a>
+
+                        <a class="col-4 text-secondary" href="">Gizlilik ve Koşullar</a>
+                        <a class="col-4 text-secondary" href="">Reklam Tercihleri</a>
+                   
+                    </div>
+                    <div class="row d-flex flex-wrap justify-content-center align-items-center text-center mt-2" style="font-size: 13px;">
+                        <a class="col-4 text-secondary" href="">Reklam</a>
+                    </div>
+                </div> 
+                <div class="text-center mt-">
+                    <img
+                      src="https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Logo.wine.svg" width="90px"height="20px"/>
+                      <span style="font-size: 16px; margin-left: -15px">
+                        Linkedin Corporation © 2021
+                      </span>
+                  </div>
+        <!-- message begin -->
+        <div class="btn-group dropup sticky-top overflow-visible" style=" border: 1px solid rgb(230, 230, 230);margin-top: 30px;top: 100px;position: sticky;">
+            <button type="button" class="btn btn-light dropdown-toggle d-flex align-items-center" style="width: 380px; height: 70px; display: flex; justify-content: space-between;" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex align-items-center  text-center ms-2">
+                <img class="rounded-pill" style="width: 40px; height: 40px; object-fit: cover;" src="/images/profile.jpg" alt="">
+                <p class=" fw-bold ms-2 mt-3">Mesajlaşma</p>
+              </div>
+              <div>
+                <span class="d-flex align-items-center justify-content-center text-center" style="margin-left: 120px;">
+                    <svg style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                    </svg>
+                    <a  href=""><i class="fa-sharp fa-solid fa-ellipsis fs-5 text text-secondary pt-2 pe-2 ms-3"></i></a>
+                </span>
+              </div>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+            </ul>
+        </div>
+        <div style="height: 100vh;"></div>
+        <!-- message end -->
+            </div>  
+            <!-- big col-3 end--> 
+        </div>        
+        <!-- big row end -->    
+        
+    </div>
+    
+</body>
+</html>
